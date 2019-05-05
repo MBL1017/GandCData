@@ -90,8 +90,8 @@ extract only the measurements on the mean and standard deviation for each measur
       AllVariableNames= colnames(data)  
       data2 = (grepl("subject", AllVariableNames)
               | grepl("activity" , AllVariableNames) 
-              | grepl("mean.." , variableNames) 
-              | grepl("std.." , AllVariableNames)) 
+              | grepl("mean.." , AllVariableNames)
+	      | grepl("std.." , AllVariableNames)) 
       
       data3<-data[ ,data2 ==TRUE]
       
